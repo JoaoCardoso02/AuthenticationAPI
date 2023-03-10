@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{4C72D1AF-F8EF-43E2-9529-D6DF43C8830C}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AuthenticationAPI" expanded="True">
+            <Node name="src" expanded="True" />
+            <Node name="tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.tests.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <DisabledProjects>
+    <String>Domain.UnitTests/Domain.UnitTests.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
