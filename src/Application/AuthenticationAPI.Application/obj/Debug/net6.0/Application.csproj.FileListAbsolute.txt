@@ -1,0 +1,15 @@
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/bin/Debug/net6.0/Application.deps.json
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/bin/Debug/net6.0/Application.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/bin/Debug/net6.0/Application.pdb
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/bin/Debug/net6.0/Domain.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/bin/Debug/net6.0/Domain.pdb
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.AssemblyInfoInputs.cache
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.AssemblyInfo.cs
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.csproj.CoreCompileInputs.cache
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.csproj.CopyComplete
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/refint/Application.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/Application.pdb
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/obj/Debug/net6.0/ref/Application.dll

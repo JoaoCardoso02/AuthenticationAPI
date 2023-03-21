@@ -1,0 +1,15 @@
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/bin/Debug/net6.0/AuthenticationAPI.Application.deps.json
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/bin/Debug/net6.0/AuthenticationAPI.Application.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/bin/Debug/net6.0/AuthenticationAPI.Application.pdb
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/bin/Debug/net6.0/AuthenticationAPI.Domain.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/bin/Debug/net6.0/AuthenticationAPI.Domain.pdb
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.csproj.AssemblyReference.cache
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.AssemblyInfoInputs.cache
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.AssemblyInfo.cs
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.csproj.CoreCompileInputs.cache
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.csproj.CopyComplete
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/refint/AuthenticationAPI.Application.dll
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/AuthenticationAPI.Application.pdb
+/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/Debug/net6.0/ref/AuthenticationAPI.Application.dll

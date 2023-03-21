@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AuthenticationAPI.Application/1.0.0": {
+        "dependencies": {
+          "AuthenticationAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AuthenticationAPI.Application.dll": {}
+        }
+      },
+      "AuthenticationAPI.Domain/1.0.0": {
+        "runtime": {
+          "AuthenticationAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AuthenticationAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AuthenticationAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

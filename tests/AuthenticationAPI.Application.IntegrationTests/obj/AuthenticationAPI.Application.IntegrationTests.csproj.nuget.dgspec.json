@@ -1,0 +1,287 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/AuthenticationAPI.Application.IntegrationTests.csproj": {}
+  },
+  "projects": {
+    "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj",
+        "projectName": "AuthenticationAPI.Application",
+        "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj",
+        "packagesPath": "/Users/joao/.nuget/packages/",
+        "outputPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/joao/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj",
+        "projectName": "AuthenticationAPI.Domain",
+        "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj",
+        "packagesPath": "/Users/joao/.nuget/packages/",
+        "outputPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/joao/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj",
+        "projectName": "AuthenticationAPI.Infrastructure",
+        "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj",
+        "packagesPath": "/Users/joao/.nuget/packages/",
+        "outputPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/joao/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj"
+              },
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/AuthenticationAPI.Application.IntegrationTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/AuthenticationAPI.Application.IntegrationTests.csproj",
+        "projectName": "AuthenticationAPI.Application.IntegrationTests",
+        "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/AuthenticationAPI.Application.IntegrationTests.csproj",
+        "packagesPath": "/Users/joao/.nuget/packages/",
+        "outputPath": "/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/joao/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj"
+              },
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj"
+              },
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
