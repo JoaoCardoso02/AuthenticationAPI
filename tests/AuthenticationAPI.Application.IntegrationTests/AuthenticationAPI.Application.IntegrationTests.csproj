@@ -19,6 +19,7 @@
     <ProjectReference Include="..\..\src\Application\AuthenticationAPI.Application\AuthenticationAPI.Application.csproj" />
     <ProjectReference Include="..\..\src\Domain\AuthenticationAPI.Domain\AuthenticationAPI.Domain.csproj" />
     <ProjectReference Include="..\..\src\Infrastructure\AuthenticationAPI.Infrastructure\AuthenticationAPI.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Services\AuthenticationAPI.API\AuthenticationAPI.API.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.13.3" />
@@ -28,5 +29,8 @@
     </PackageReference>
     <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.8" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.8" />
   </ItemGroup>
 </Project>

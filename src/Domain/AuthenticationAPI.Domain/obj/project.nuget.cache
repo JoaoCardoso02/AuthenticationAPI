@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QeHoO5OGvaMfcoqxOVYq8cGAwSRdDOxTlqn19VmRN7BBS+h1dAHmeo1QVCM4RPl6nYC+DDcYRZKRYD85SjErKA==",
+  "dgSpecHash": "eQPMqM8d2n8OXV779LbcUeCgyHshaXcFzzEX7VNTArRWVwq0yT1Tpfw/G+Sr6Sf1YNv3AGsZPiuf4lv54iwkVA==",
   "success": true,
   "projectFilePath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Domain/AuthenticationAPI.Domain/AuthenticationAPI.Domain.csproj",
   "expectedPackageFiles": [],

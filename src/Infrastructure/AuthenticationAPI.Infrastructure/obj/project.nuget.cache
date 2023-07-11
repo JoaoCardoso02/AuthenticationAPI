@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g4eJxIWsLstYl50Wt4ZCIkiF1ykzCyde9n7HNkQDIrBrmdejTmv9LCAcIG3SJTsyT7mQwY4s52tNa/vJombXbQ==",
+  "dgSpecHash": "v9RXzmBXmS9d2vTqJQMsRUJ1tKRJXRVRXaskRTg4ZTbB2flZuReHCDdEMDcvJGOEN2BP17R1CUn5HyjtqBvR0A==",
   "success": true,
   "projectFilePath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/joao/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/joao/.nuget/packages/efcore.namingconventions/7.0.2/efcore.namingconventions.7.0.2.nupkg.sha512",
     "/Users/joao/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/joao/.nuget/packages/microsoft.entityframeworkcore/7.0.3/microsoft.entityframeworkcore.7.0.3.nupkg.sha512",

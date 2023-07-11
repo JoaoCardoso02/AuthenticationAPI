@@ -29,4 +29,10 @@ public class EmailUnit
 
         Assert.IsFalse(email1.Equals(email2));
     }
+
+    [Test]
+    public void ShouldThrowWhenEmailIsInvalid()
+    {
+        Assert.Throws<Exception>(() => Email.Create("invalid-email..."));
+    }
 }

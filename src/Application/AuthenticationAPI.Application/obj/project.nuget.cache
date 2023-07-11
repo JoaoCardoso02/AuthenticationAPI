@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8TbBuilebJi92G78f2A3nTjuPxtSfHD+YV6DDvJu8rn6rMAfBldjylDPVluejg+MysituObr1iTpJ8utT7s8sw==",
+  "dgSpecHash": "/OVlLoW2wQiNA+WtYHNvpqjMak9aOH0apDutNjZlt3SHnEzxEEOyqrLptsy0Tgo9FhJ41tny/vWTIoniPLKIMQ==",
   "success": true,
   "projectFilePath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/AuthenticationAPI.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/joao/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

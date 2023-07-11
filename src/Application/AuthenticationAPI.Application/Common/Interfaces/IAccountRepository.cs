@@ -6,6 +6,6 @@ namespace AuthenticationAPI.Application.Common.Interfaces;
 
 public interface IAccountRepository
 {
-    Account GetAccount(Email email);
+    Account? GetAccount(Email email);
     int CreateAccount(Account account);
 }

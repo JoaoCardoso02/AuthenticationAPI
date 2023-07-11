@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Aac0ehHNK/yVz3wL+0phG478S24vzmJak42qAhRSc7Ek5NlPhD3NY1y2mmeRIOAonTFmMzVcY/pBl21FiMJGfA==",
+  "dgSpecHash": "v6Nh9oRw1gckttHXg9W2zPmz/j+jW5etqdvRNAW93n+BqMKw66PwPPGbwnpjfQulZBcf9tlufOnVizc8mB9DAg==",
   "success": true,
   "projectFilePath": "/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Domain.UnitTests/AuthenticationAPI.Domain.UnitTests.csproj",
   "expectedPackageFiles": [

@@ -41,6 +41,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -110,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -196,7 +202,74 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/joao/workspace/projects/AuthenticationAPI/src/Services/AuthenticationAPI.API/AuthenticationAPI.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/joao/workspace/projects/AuthenticationAPI/src/Services/AuthenticationAPI.API/AuthenticationAPI.API.csproj",
+        "projectName": "AuthenticationAPI.API",
+        "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Services/AuthenticationAPI.API/AuthenticationAPI.API.csproj",
+        "packagesPath": "/Users/joao/.nuget/packages/",
+        "outputPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Services/AuthenticationAPI.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/joao/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -230,6 +303,9 @@
               },
               "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj": {
                 "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Infrastructure/AuthenticationAPI.Infrastructure/AuthenticationAPI.Infrastructure.csproj"
+              },
+              "/Users/joao/workspace/projects/AuthenticationAPI/src/Services/AuthenticationAPI.API/AuthenticationAPI.API.csproj": {
+                "projectPath": "/Users/joao/workspace/projects/AuthenticationAPI/src/Services/AuthenticationAPI.API/AuthenticationAPI.API.csproj"
               }
             }
           }
@@ -244,6 +320,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.5.0, )"
@@ -279,7 +367,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     }

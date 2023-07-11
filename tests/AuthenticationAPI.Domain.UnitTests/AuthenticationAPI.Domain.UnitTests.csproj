@@ -19,4 +19,10 @@
     <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
     <ProjectReference Include="..\..\src\Domain\AuthenticationAPI.Domain\AuthenticationAPI.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+  </ItemGroup>
 </Project>

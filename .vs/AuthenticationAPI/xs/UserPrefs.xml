@@ -1,42 +1,56 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{4C72D1AF-F8EF-43E2-9529-D6DF43C8830C}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+﻿<Properties StartupConfiguration="{E358A309-9F62-4277-B7CC-319EFE7E7FBF}|Default" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/BaseTestFixture.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/BaseTestFixture.cs" line="10" column="1" />
+      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="8" column="1" />
+      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="14" column="1" />
+      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="18" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.ItemProperties.src.Services.Web.AuthenticationAPI.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AuthenticationAPI.sln">
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>Domain.UnitTests/Domain.UnitTests.csproj</String>
+    <String>src/Application/AuthenticationAPI.Application.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="tests/AuthenticationAPI.Application.IntegrationTests/UseCases/SignIn.Integration.cs">
     <Files>
-      <File FileName="src/Domain/Entities/Account.cs" Line="5" Column="31" />
-      <File FileName="src/Application/UseCases/SignIn.cs" Line="22" Column="36" />
-      <File FileName="src/Infrastructure/Repositories/AccountRepository.cs" Line="20" Column="3" />
-      <File FileName="src/Application/Application.csproj" Line="8" Column="1" />
-      <File FileName="src/Domain/Domain.csproj" Line="6" Column="19" />
-      <File FileName="gitignore.config" Line="1" Column="1" />
-      <File FileName="AuthenticationAPI.sln" Line="19" Column="11" />
+      <File FileName="tests/AuthenticationAPI.Application.IntegrationTests/UseCases/SignIn.Integration.cs" Line="7" Column="41" />
+      <File FileName="src/Application/AuthenticationAPI.Application/UseCases/SignIn.cs" Line="2" Column="45" />
+      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Repositories/AccountRepository.cs" Line="1" Column="1" />
+      <File FileName="tests/AuthenticationAPI.Domain.UnitTests/Entities/Account.Unit.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AuthenticationAPI" expanded="True" selected="True">
-            <Node name="Solution Items" expanded="True" />
+          <Node name="AuthenticationAPI" expanded="True">
             <Node name="src" expanded="True">
               <Node name="Application" expanded="True">
-                <Node name="Common" expanded="True">
-                  <Node name="Interfaces" expanded="True" />
+                <Node name="AuthenticationAPI.Application">
+                  <Node name="Common" expanded="True">
+                    <Node name="Interfaces" expanded="True" />
+                  </Node>
+                  <Node name="UseCases" expanded="True" />
                 </Node>
-                <Node name="UseCases" expanded="True" />
-              </Node>
-              <Node name="Domain" expanded="True">
-                <Node name="Entities" expanded="True" />
-                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="Infrastructure" expanded="True">
-                <Node name="Migrations" expanded="True" />
-                <Node name="Persistence" expanded="True">
-                  <Node name="Configurations" expanded="True" />
+                <Node name="AuthenticationAPI.Infrastructure">
+                  <Node name="Repositories" expanded="True" />
                 </Node>
-                <Node name="Repositories" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="tests" expanded="True">
+              <Node name="AuthenticationAPI.Application.IntegrationTests">
+                <Node name="UseCases" expanded="True">
+                  <Node name="SignIn.Integration.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="AuthenticationAPI.Domain.UnitTests" expanded="True">
+                <Node name="Entities" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -47,17 +61,15 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="AuthenticationAPI" expanded="True">
-            <Node name="tests" expanded="True" />
+          <Node name="AuthenticationAPI">
+            <Node name="tests">
+              <Node name="AuthenticationAPI.Application.IntegrationTests" expanded="True">
+                <Node name="Application.IntegrationTests.UseCases" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.tests.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
-  <Debugger.DebugSourceFolders />
-  <DisabledProjects>
-    <String>Domain.UnitTests/Domain.UnitTests.csproj</String>
-  </DisabledProjects>
-  <MultiItemStartupConfigurations />
 </Properties>

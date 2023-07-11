@@ -1,9 +1,6 @@
-﻿using System;
-using AuthenticationAPI.Application;
-using AuthenticationAPI.Application.Common.Interfaces;
+﻿using AuthenticationAPI.Application.Common.Interfaces;
 using AuthenticationAPI.Domain.Entities;
 using AuthenticationAPI.Domain.ValueObjects;
-using AuthenticationAPI.Infrastructure.Common.Interfaces;
 
 namespace AuthenticationAPI.Infrastructure.Repositories;
 
@@ -16,9 +13,9 @@ public class AccountRepository : IAccountRepository
 		_context = context;
     }
 
-	public Account GetAccount(Email email)
+	public Account? GetAccount(Email email)
 	{
-        return _context.Account.Single(account => account.Email.Value == email);
+        return _context.Account.SingleOrDefault(account => account.Email.Value == email);
     }
 
     public int CreateAccount(Account account)

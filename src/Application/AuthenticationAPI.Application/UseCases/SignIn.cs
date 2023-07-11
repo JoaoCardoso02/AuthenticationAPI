@@ -13,14 +13,20 @@ public class SignIn
         _accountRepository = accountRepository;
     }
 
-    public Account Execute(string email, string password)
+    public bool Execute(string email, string password)
     {
         Email emailResult = Email.Create(email);
 
-        Account account = new Account(emailResult, password);
+        Account? account = _accountRepository.GetAccount(emailResult);
 
-        _accountRepository.GetAccount(emailResult);
+        if (account == null)
+            throw new Exception("Account does not exist.");
 
-        return account;
+        bool samePassword = BCrypt.Net.BCrypt.Verify(password, account.Password);
+
+        if (samePassword == false)
+            throw new Exception("Invalid password.");
+
+        return true;
     }
 }
