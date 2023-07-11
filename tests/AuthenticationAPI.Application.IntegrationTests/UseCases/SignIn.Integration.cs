@@ -28,8 +28,8 @@ public class SignInIntegration
         IAccountRepository accountRepository = new AccountRepository(context);
         SignIn signIn = new SignIn(accountRepository);
 
-        Exception ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
-        Assert.That(ex.Message, Is.EqualTo("Email is not valid."));
+        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
+        Assert.That(ex?.Message, Is.EqualTo("Email is not valid."));
     }
 
     [Test]
@@ -50,8 +50,8 @@ public class SignInIntegration
         IAccountRepository accountRepository = new AccountRepository(context);
         SignIn signIn = new SignIn(accountRepository);
 
-        Exception ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
-        Assert.That(ex.Message, Is.EqualTo("Account does not exist."));
+        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
+        Assert.That(ex?.Message, Is.EqualTo("Account does not exist."));
     }
 
     [Test]
@@ -76,8 +76,8 @@ public class SignInIntegration
         IAccountRepository accountRepository = new AccountRepository(context);
         SignIn signIn = new SignIn(accountRepository);
 
-        Exception ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
-        Assert.That(ex.Message, Is.EqualTo("Account does not exist."));
+        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
+        Assert.That(ex?.Message, Is.EqualTo("Account does not exist."));
     }
 
     [Test]

@@ -1,20 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using AuthenticationAPI.Domain.Entities;
-using AuthenticationAPI.Infrastructure.Common.Interfaces;
 using Infrastructure.Persistence.Configurations;
 
 namespace AuthenticationAPI.Infrastructure.Persistence;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
-    private readonly Action<ApplicationDbContext, ModelBuilder> _modelCustomizer;
+    private readonly Action<ApplicationDbContext, ModelBuilder>? _modelCustomizer;
 
     #region Constructors
     public ApplicationDbContext()
     {
     }
 
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, Action<ApplicationDbContext, ModelBuilder> modelCustomizer = null)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, Action<ApplicationDbContext, ModelBuilder>? modelCustomizer = null)
         : base(options)
     {
         _modelCustomizer = modelCustomizer;
@@ -40,5 +39,5 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         }
     }
 
-    public DbSet<Account> Account { get; set; } 
+    public DbSet<Account> Account { get; set; }
 }
