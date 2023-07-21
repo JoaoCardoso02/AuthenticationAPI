@@ -36,7 +36,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\..\Domain\AuthenticationAPI.Domain\AuthenticationAPI.Domain.csproj" />
     <ProjectReference Include="..\..\Application\AuthenticationAPI.Application\AuthenticationAPI.Application.csproj" />
   </ItemGroup>

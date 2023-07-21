@@ -13,9 +13,6 @@
     <Folder Include="UseCases\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
-    <ProjectReference Include="..\..\src\Application\Application.csproj" />
-    <ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\Application\AuthenticationAPI.Application\AuthenticationAPI.Application.csproj" />
     <ProjectReference Include="..\..\src\Domain\AuthenticationAPI.Domain\AuthenticationAPI.Domain.csproj" />
     <ProjectReference Include="..\..\src\Infrastructure\AuthenticationAPI.Infrastructure\AuthenticationAPI.Infrastructure.csproj" />
