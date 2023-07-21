@@ -1,4 +1,6 @@
-﻿using AuthenticationAPI.Infrastructure.Common.Interfaces;
+﻿using AuthenticationAPI.Application.Common.Interfaces.Services;
+using AuthenticationAPI.Application.Services;
+using AuthenticationAPI.Infrastructure.Common.Interfaces;
 using AuthenticationAPI.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +12,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var configurationBuilder = new ConfigurationBuilder()
+    //.SetBasePath("path here") //<--You would need to set the path
+    .AddJsonFile("appsettings.json"); //or what ever file you have the settings
+
+//IConfiguration configuration = configurationBuilder.Build();
+
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+//builder.Services.AddScoped(_ => configuration);
+
+builder.Services.AddSingleton<ISecurityService, SecurityService>();
 
 var app = builder.Build();
 

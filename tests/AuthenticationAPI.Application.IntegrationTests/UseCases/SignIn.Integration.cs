@@ -5,20 +5,32 @@ using AuthenticationAPI.Domain.Entities;
 using AuthenticationAPI.Domain.ValueObjects;
 using AuthenticationAPI.Infrastructure.Persistence;
 using AuthenticationAPI.Infrastructure.Repositories;
+using Microsoft.Extensions.Configuration;
+using AuthenticationAPI.Application.Common.Interfaces.Services;
+using AuthenticationAPI.Application.Services;
+using AuthenticationAPI.Infrastructure.Common.Interfaces;
 
 namespace AuthenticationAPI.Application.IntegrationTests.UseCases;
 
+
+[TestFixture()]
 public class SignInIntegration
 {
+
+    private readonly IConfiguration _configuration = new ConfigurationBuilder()
+        .AddInMemoryCollection(new Dictionary<string, string> {
+                { "AccessTokenSecurityKey", "MyUltraMegaBlasterAccessTokenSecurityKey" },
+        }).Build();
+
+    private readonly DbContextOptions<ApplicationDbContext> _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
+        .UseInMemoryDatabase("in-memory")
+        .Options;
+
     [Test]
     public void Should_Throw_When_EmailIsWrong()
     {
         string email = "wrongemail...";
         string password = "thestrongestpassword";
-
-        var _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase("in-memory")
-            .Options;
 
         using var context = new ApplicationDbContext(_contextOptions);
 
@@ -26,7 +38,9 @@ public class SignInIntegration
         context.Database.EnsureCreated();
 
         IAccountRepository accountRepository = new AccountRepository(context);
-        SignIn signIn = new SignIn(accountRepository);
+        ISecurityService securityService = new SecurityService(_configuration);
+
+        SignIn signIn = new SignIn(accountRepository, securityService);
 
         Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
         Assert.That(ex?.Message, Is.EqualTo("Email is not valid."));
@@ -38,17 +52,14 @@ public class SignInIntegration
         string email = "itsabeautiful@email.com";
         string password = "thestrongestpassword";
 
-        var _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase("in-memory")
-            .Options;
-
         using var context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 
         IAccountRepository accountRepository = new AccountRepository(context);
-        SignIn signIn = new SignIn(accountRepository);
+        ISecurityService securityService = new SecurityService(_configuration);
+        SignIn signIn = new SignIn(accountRepository, securityService);
 
         Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
         Assert.That(ex?.Message, Is.EqualTo("Account does not exist."));
@@ -60,10 +71,6 @@ public class SignInIntegration
         string email = "itsabeautiful@email.com";
         string password = "thestrongestpassword";
 
-        var _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase("in-memory")
-            .Options;
-
         using var context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
@@ -74,7 +81,8 @@ public class SignInIntegration
         context.Account.Add(new Account(Email.Create(email), hashedPassword));
 
         IAccountRepository accountRepository = new AccountRepository(context);
-        SignIn signIn = new SignIn(accountRepository);
+        ISecurityService securityService = new SecurityService(_configuration);
+        SignIn signIn = new SignIn(accountRepository, securityService);
 
         Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
         Assert.That(ex?.Message, Is.EqualTo("Account does not exist."));
@@ -85,10 +93,6 @@ public class SignInIntegration
     {
         string email = "itsabeautiful@email.com";
         string password = "thestrongestpassword";
-
-        var _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase("in-memory")
-            .Options;
 
         using var context = new ApplicationDbContext(_contextOptions);
 
@@ -101,7 +105,8 @@ public class SignInIntegration
         context.SaveChanges();
 
         IAccountRepository accountRepository = new AccountRepository(context);
-        SignIn signIn = new SignIn(accountRepository);
+        ISecurityService securityService = new SecurityService(_configuration);
+        SignIn signIn = new SignIn(accountRepository, securityService);
 
         bool isValid = signIn.Execute(email, password);
 

@@ -400,3 +400,4 @@ FodyWeavers.xsd
 # custom
 */obj
 */bin
+.DS_Store

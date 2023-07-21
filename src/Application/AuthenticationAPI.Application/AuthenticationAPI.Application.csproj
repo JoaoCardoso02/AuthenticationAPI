@@ -9,15 +9,21 @@
   <ItemGroup>
     <None Remove="Common\" />
     <None Remove="Common\Interfaces\" />
+    <None Remove="Services\" />
+    <None Remove="Common\Interfaces\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Common\Interfaces\" />
+    <Folder Include="Services\" />
+    <Folder Include="Common\Interfaces\Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\AuthenticationAPI.Domain\AuthenticationAPI.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.20" />
   </ItemGroup>
 </Project>
