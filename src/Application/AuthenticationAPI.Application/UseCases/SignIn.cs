@@ -1,4 +1,5 @@
-﻿using AuthenticationAPI.Application.Common.Interfaces.Services;
+﻿using AuthenticationAPI.Application.Adapters;
+using AuthenticationAPI.Application.Common.Interfaces.Services;
 using AuthenticationAPI.Domain.Entities;
 using AuthenticationAPI.Domain.ValueObjects;
 
@@ -17,7 +18,7 @@ public class SignIn
         _securityService = securityService;
     }
 
-    public bool Execute(string email, string password)
+    public string Execute(string email, string password)
     {
         Email emailResult = Email.Create(email);
 
@@ -26,13 +27,8 @@ public class SignIn
         if (account == null || account.Id == null)
             throw new Exception("Account does not exist.");
 
-        bool samePassword = BCrypt.Net.BCrypt.Verify(password, account.Password);
+        CryptographyAdapter.Verify(password, account.Password);
 
-        if (samePassword == false)
-            throw new Exception("Invalid password.");
-
-        var a = _securityService.GenerateAccessToken(account);
-
-        return true;
+        return _securityService.GenerateAccessToken(account);
     }
 }

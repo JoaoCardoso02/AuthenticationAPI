@@ -6,6 +6,7 @@ using AuthenticationAPI.Domain.Entities;
 using AuthenticationAPI.Application.Common.Interfaces.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System.Linq;
 
 namespace AuthenticationAPI.Application.Services;
 
@@ -40,6 +41,18 @@ public class SecurityService : ISecurityService
         SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
 
         return tokenHandler.WriteToken(token);
+    }
+
+    public AuthPayload GetPayload(string token)
+    {
+        JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+
+        JwtSecurityToken jwtSecurityToken = tokenHandler.ReadJwtToken(token);
+
+        return new AuthPayload(
+            int.Parse(jwtSecurityToken.Payload["userId"].ToString()!),
+            jwtSecurityToken.Payload["email"].ToString()
+        );
     }
 }
 

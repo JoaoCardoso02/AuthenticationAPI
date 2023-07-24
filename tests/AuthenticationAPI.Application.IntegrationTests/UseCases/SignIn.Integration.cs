@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using AuthenticationAPI.Application.Common.Interfaces.Services;
 using AuthenticationAPI.Application.Services;
 using AuthenticationAPI.Infrastructure.Common.Interfaces;
+using AuthenticationAPI.Application.Adapters;
 
 namespace AuthenticationAPI.Application.IntegrationTests.UseCases;
 
@@ -32,7 +33,7 @@ public class SignInIntegration
         string email = "wrongemail...";
         string password = "thestrongestpassword";
 
-        using var context = new ApplicationDbContext(_contextOptions);
+        using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
@@ -52,7 +53,7 @@ public class SignInIntegration
         string email = "itsabeautiful@email.com";
         string password = "thestrongestpassword";
 
-        using var context = new ApplicationDbContext(_contextOptions);
+        using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
@@ -71,7 +72,7 @@ public class SignInIntegration
         string email = "itsabeautiful@email.com";
         string password = "thestrongestpassword";
 
-        using var context = new ApplicationDbContext(_contextOptions);
+        using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
@@ -94,12 +95,12 @@ public class SignInIntegration
         string email = "itsabeautiful@email.com";
         string password = "thestrongestpassword";
 
-        using var context = new ApplicationDbContext(_contextOptions);
+        using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 
-        string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+        string hashedPassword = CryptographyAdapter.HashPassword(password);
 
         context.Account.Add(new Account(Email.Create(email), hashedPassword));
         context.SaveChanges();
@@ -108,9 +109,38 @@ public class SignInIntegration
         ISecurityService securityService = new SecurityService(_configuration);
         SignIn signIn = new SignIn(accountRepository, securityService);
 
-        bool isValid = signIn.Execute(email, password);
+        string token = signIn.Execute(email, password);
 
-        Assert.That(isValid, Is.True);
+        Assert.That(token, Is.Not.Empty);
+    }
+
+    [Test]
+    public void Should_ValidateToken_When_LoginIsSucessfull()
+    {
+        string email = "itsabeautiful@email.com";
+        string password = "thestrongestpassword";
+
+        using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
+
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
+
+        string hashedPassword = CryptographyAdapter.HashPassword(password);
+
+        context.Account.Add(new Account(Email.Create(email), hashedPassword));
+        context.SaveChanges();
+
+        IAccountRepository accountRepository = new AccountRepository(context);
+        ISecurityService securityService = new SecurityService(_configuration);
+        SignIn signIn = new SignIn(accountRepository, securityService);
+
+        string token = signIn.Execute(email, password);
+
+        AuthPayload payload = securityService.GetPayload(token);
+
+        Assert.That(payload.Id, Is.TypeOf<int>());
+        Assert.That(payload.Email, Is.TypeOf<string>());
+        Assert.That(payload.Email, Is.EqualTo(email));
     }
 }
 
