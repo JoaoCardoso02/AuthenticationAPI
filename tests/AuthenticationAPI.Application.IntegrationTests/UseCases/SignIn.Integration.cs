@@ -139,8 +139,8 @@ public class SignInIntegration
         AuthPayload payload = securityService.GetPayload(token);
 
         Assert.That(payload.Id, Is.TypeOf<int>());
-        Assert.That(payload.Email, Is.TypeOf<string>());
-        Assert.That(payload.Email, Is.EqualTo(email));
+        Assert.That(payload.Email, Is.TypeOf<Email>());
+        Assert.That(payload.Email.Value, Is.EqualTo(email));
     }
 }
 

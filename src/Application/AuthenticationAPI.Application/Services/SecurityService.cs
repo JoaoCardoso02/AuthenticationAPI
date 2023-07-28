@@ -7,6 +7,7 @@ using AuthenticationAPI.Application.Common.Interfaces.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Linq;
+using AuthenticationAPI.Domain.ValueObjects;
 
 namespace AuthenticationAPI.Application.Services;
 
@@ -49,10 +50,10 @@ public class SecurityService : ISecurityService
 
         JwtSecurityToken jwtSecurityToken = tokenHandler.ReadJwtToken(token);
 
-        return new AuthPayload(
-            int.Parse(jwtSecurityToken.Payload["userId"].ToString()!),
-            jwtSecurityToken.Payload["email"].ToString()
-        );
+        int id = int.Parse(jwtSecurityToken.Payload["userId"].ToString()!);
+        Email email = Email.Create(jwtSecurityToken.Payload["email"].ToString());
+
+        return new AuthPayload(id, email);
     }
 }
 
