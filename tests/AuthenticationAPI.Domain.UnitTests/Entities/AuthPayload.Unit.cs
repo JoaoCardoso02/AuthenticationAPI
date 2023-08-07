@@ -11,7 +11,7 @@ namespace AuthenticationAPI.Domain.UnitTests.Entities;
 internal class AuthPayloadUnit
 {
     [Test]
-    public void ShouldInstanceAuthPayloadSuccessfully()
+    public void Should_InstanceAuthPayload_Successfully()
     {
         int id = 1;
         Email email = Email.Create("valid@email.com");
@@ -21,7 +21,7 @@ internal class AuthPayloadUnit
     }
 
     [Test]
-    public void ShouldReturnIdSuccessfully()
+    public void Should_ReturnId_Successfully()
     {
         int id = 1;
         Email email = Email.Create("valid@email.com");
@@ -34,7 +34,7 @@ internal class AuthPayloadUnit
     }
 
     [Test]
-    public void ShouldReturnEmailSuccessfully()
+    public void Should_ReturnEmail_Successfully()
     {
         int id = 1;
         Email email = Email.Create("valid@email.com");

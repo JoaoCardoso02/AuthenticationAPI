@@ -5,7 +5,7 @@ namespace AuthenticationAPI.Domain.UnitTests.ValueObjects;
 public class EmailUnit
 {
     [Test]
-    public void ShouldReturnAValidEmailValue()
+    public void Should_ReturnAValidEmailValue_When_EmailIsValid()
     {
         Email email = Email.Create("itsasimpleemail@email.com");
 
@@ -13,7 +13,7 @@ public class EmailUnit
     }
 
     [Test]
-    public void ShouldBeEqualValues()
+    public void Should_BeTheSameEmail_When_EmailsAreEquals()
     {
         Email email1 = Email.Create("itsasimpleemail@email.com");
         Email email2 = Email.Create("itsasimpleemail@email.com");
@@ -22,7 +22,7 @@ public class EmailUnit
     }
 
     [Test]
-    public void ShouldNotBeEqualValues()
+    public void Should_BeTheSameEmail_When_EmailsAreNotEquals()
     {
         Email email1 = Email.Create("itsasimpleemail@email.com");
         Email email2 = Email.Create("itsadifferentemail@email.com");
@@ -31,7 +31,7 @@ public class EmailUnit
     }
 
     [Test]
-    public void ShouldThrowWhenEmailIsInvalid()
+    public void Should_Throw_When_EmailIsInvalid()
     {
         Assert.Throws<Exception>(() => Email.Create("invalid-email..."));
     }
