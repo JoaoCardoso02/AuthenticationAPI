@@ -6,7 +6,7 @@ namespace AuthenticationAPI.Domain.UnitTests.Entities;
 public class AccountUnit
 {
     [Test]
-    public void ShouldInstanceAccountSuccessfully() {
+    public void Should_InstanceAccount_Successfully() {
         Email email = Email.Create("valid@email.com");
         Account account = new Account(email, "strong-password");
 
@@ -14,7 +14,7 @@ public class AccountUnit
     }
 
     [Test]
-    public void ShouldReturnEmailSuccessfully() {
+    public void Should_ReturnEmail_Successfully() {
         Email email = Email.Create("valid@email.com");
         Account account = new Account(email, "strong-password");
 
@@ -25,7 +25,7 @@ public class AccountUnit
     }
 
     [Test]
-    public void ShouldReturnPasswordSuccessfully() {
+    public void Should_ReturnPassword_Successfully() {
         Email email = Email.Create("valid@email.com");
         string password = "strong-password";
         Account account = new Account(email, password);
@@ -37,7 +37,7 @@ public class AccountUnit
     }
 
     [Test]
-    public void ShouldInitCreatedAtFieldAsCurrentDateTime() {
+    public void Should_InitCreatedAtField_Successfully() {
         Email email = Email.Create("valid@email.com");
         Account account = new Account(email, "strong-password");
 
@@ -48,7 +48,7 @@ public class AccountUnit
     }
 
     [Test]
-    public void ShouldChangeOnlyWritableFieldsSucessfully() {
+    public void Should_ChangeOnlyWritableFields_Successfully() {
         Email email = Email.Create("valid@email.com");
         Account account = new Account(email, "strong-password");
 
