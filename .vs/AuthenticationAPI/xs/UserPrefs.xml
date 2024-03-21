@@ -1,77 +1,59 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{E358A309-9F62-4277-B7CC-319EFE7E7FBF}|Default">
-  <MonoDevelop.Ide.ItemProperties.tests.AuthenticationAPI.Application.UnitTests FirstBuild="True" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.src.Services.Web.AuthenticationAPI.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/BaseTestFixture.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/BaseTestFixture.cs" line="10" column="1" />
-      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="8" column="1" />
-      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="14" column="1" />
-      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="18" column="1" />
-      <Breakpoint file="/Users/joao/workspace/projects/AuthenticationAPI/src/Application/AuthenticationAPI.Application/Services/SecurityService.cs" relfile="src/Application/AuthenticationAPI.Application/Services/SecurityService.cs" line="26" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+﻿<Properties StartupConfiguration="{E358A309-9F62-4277-B7CC-319EFE7E7FBF}|Default" GitUserInfo="UsingMD">
   <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.Workbench ActiveDocument="tests/AuthenticationAPI.Application.IntegrationTests/UseCases/SignIn.Integration.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>Domain.UnitTests/Domain.UnitTests.csproj</String>
+    <String>src/Application/AuthenticationAPI.Application.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.tests.AuthenticationAPI.Application.UnitTests FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.src.Services.Web.AuthenticationAPI.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/AuthenticationAPI.Infrastructure/Persistence/ApplicationDbContext.cs">
     <Files>
-      <File FileName="tests/AuthenticationAPI.Domain.UnitTests/Entities/Account.Unit.cs" Line="1" Column="1" />
-      <File FileName="tests/AuthenticationAPI.Application.IntegrationTests/UseCases/SignIn.Integration.cs" Line="99" Column="42" />
-      <File FileName="src/Application/AuthenticationAPI.Application/UseCases/SignIn.cs" Line="27" Column="1" />
-      <File FileName="src/Application/AuthenticationAPI.Application/Services/SecurityService.cs" Line="26" Column="1" />
-      <File FileName="src/Services/AuthenticationAPI.API/Program.cs" Line="21" Column="14" />
-      <File FileName="src/Domain/AuthenticationAPI.Domain/ValueObjects/Email.cs" Line="18" Column="1" />
+      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Repositories/AccountRepository.cs" />
+      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Persistence/Configurations/AccountConfiguration.cs" />
+      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Persistence/ApplicationDbContext.cs" Line="7" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AuthenticationAPI" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Application" expanded="True">
-                <Node name="AuthenticationAPI.Application" expanded="True">
-                  <Node name="Common" expanded="True">
-                    <Node name="Interfaces" expanded="True">
-                      <Node name="Services" expanded="True" />
-                    </Node>
-                  </Node>
-                  <Node name="Services" expanded="True" />
-                  <Node name="UseCases" expanded="True" />
-                </Node>
-              </Node>
               <Node name="Domain" expanded="True">
                 <Node name="AuthenticationAPI.Domain" expanded="True">
-                  <Node name="ValueObjects" expanded="True" />
+                  <Node name="Entities" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Infrastructure" expanded="True">
-                <Node name="AuthenticationAPI.Infrastructure" expanded="True">
-                  <Node name="Persistence" expanded="True" />
+              <Node name="Infrastructure">
+                <Node name="AuthenticationAPI.Infrastructure">
+                  <Node name="Persistence" expanded="True">
+                    <Node name="ApplicationDbContext.cs" selected="True" />
+                  </Node>
                   <Node name="Repositories" expanded="True" />
                 </Node>
               </Node>
             </Node>
-            <Node name="tests">
+            <Node name="tests" expanded="True">
               <Node name="AuthenticationAPI.Application.IntegrationTests">
-                <Node name="UseCases">
-                  <Node name="SignIn.Integration.cs" selected="True" />
-                </Node>
+                <Node name="UseCases" expanded="True" />
               </Node>
-              <Node name="AuthenticationAPI.Domain.UnitTests" expanded="True">
+              <Node name="AuthenticationAPI.Domain.UnitTests">
                 <Node name="Entities" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__" />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <DisabledProjects>
-    <String>Domain.UnitTests/Domain.UnitTests.csproj</String>
-    <String>src/Application/AuthenticationAPI.Application.csproj</String>
-  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/joao/Workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/BaseTestFixture.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/BaseTestFixture.cs" line="10" column="1" />
+      <Breakpoint file="/Users/joao/Workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="8" column="1" />
+      <Breakpoint file="/Users/joao/Workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="14" column="1" />
+      <Breakpoint file="/Users/joao/Workspace/projects/AuthenticationAPI/tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" relfile="tests/AuthenticationAPI.Application.IntegrationTests/Testing.cs" line="18" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using AuthenticationAPI.Application.Common.DTOs;
 using AuthenticationAPI.Application.Common.Interfaces;
 using AuthenticationAPI.Application.UseCases;
 using AuthenticationAPI.Domain.Entities;
@@ -30,8 +31,10 @@ public class SignInIntegration
     [Test]
     public void Should_Throw_When_EmailIsWrong()
     {
-        string email = "wrongemail...";
-        string password = "thestrongestpassword";
+        SignInDTO signInDTO = new() {
+            Email = "wrongemail...",
+            Password = "thestrongestpassword"
+        };
 
         using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
@@ -43,15 +46,17 @@ public class SignInIntegration
 
         SignIn signIn = new SignIn(accountRepository, securityService);
 
-        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
+        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(signInDTO));
         Assert.That(ex?.Message, Is.EqualTo("Email is not valid."));
     }
 
     [Test]
     public void Should_Throw_When_AccountNotFound()
     {
-        string email = "itsabeautiful@email.com";
-        string password = "thestrongestpassword";
+        SignInDTO signInDTO = new() {
+            Email = "itsabeautiful@email.com",
+            Password = "thestrongestpassword"
+        };
 
         using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
@@ -62,15 +67,17 @@ public class SignInIntegration
         ISecurityService securityService = new SecurityService(_configuration);
         SignIn signIn = new SignIn(accountRepository, securityService);
 
-        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
+        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(signInDTO));
         Assert.That(ex?.Message, Is.EqualTo("Account does not exist."));
     }
 
     [Test]
     public void Should_Throw_When_PasswordIsInvalid()
     {
-        string email = "itsabeautiful@email.com";
-        string password = "thestrongestpassword";
+        SignInDTO signInDTO = new() {
+            Email = "itsabeautiful@email.com",
+            Password = "thestrongestpassword"
+        };
 
         using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
@@ -79,37 +86,39 @@ public class SignInIntegration
 
         string hashedPassword = BCrypt.Net.BCrypt.HashPassword("different-password");
 
-        context.Account.Add(new Account(Email.Create(email), hashedPassword));
+        context.Account.Add(new Account(Email.Create(signInDTO.Email), hashedPassword));
 
         IAccountRepository accountRepository = new AccountRepository(context);
         ISecurityService securityService = new SecurityService(_configuration);
         SignIn signIn = new SignIn(accountRepository, securityService);
 
-        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(email, password));
+        Exception? ex = Assert.Throws<Exception>(() => signIn.Execute(signInDTO));
         Assert.That(ex?.Message, Is.EqualTo("Account does not exist."));
     }
 
     [Test]
     public void Should_Login_When_LoginInfoIsCorrect()
     {
-        string email = "itsabeautiful@email.com";
-        string password = "thestrongestpassword";
+        SignInDTO signInDTO = new() {
+            Email = "itsabeautiful@email.com",
+            Password = "thestrongestpassword"
+        };
 
         using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 
-        string hashedPassword = CryptographyAdapter.HashPassword(password);
+        string hashedPassword = CryptographyAdapter.HashPassword(signInDTO.Password);
 
-        context.Account.Add(new Account(Email.Create(email), hashedPassword));
+        context.Account.Add(new Account(Email.Create(signInDTO.Email), hashedPassword));
         context.SaveChanges();
 
         IAccountRepository accountRepository = new AccountRepository(context);
         ISecurityService securityService = new SecurityService(_configuration);
         SignIn signIn = new SignIn(accountRepository, securityService);
 
-        string token = signIn.Execute(email, password);
+        string token = signIn.Execute(signInDTO);
 
         Assert.That(token, Is.Not.Empty);
     }
@@ -117,30 +126,32 @@ public class SignInIntegration
     [Test]
     public void Should_ValidateToken_When_LoginIsSucessfull()
     {
-        string email = "itsabeautiful@email.com";
-        string password = "thestrongestpassword";
+        SignInDTO signInDTO = new() {
+            Email = "itsabeautiful@email.com",
+            Password = "thestrongestpassword"
+        };
 
         using ApplicationDbContext context = new ApplicationDbContext(_contextOptions);
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 
-        string hashedPassword = CryptographyAdapter.HashPassword(password);
+        string hashedPassword = CryptographyAdapter.HashPassword(signInDTO.Password);
 
-        context.Account.Add(new Account(Email.Create(email), hashedPassword));
+        context.Account.Add(new Account(Email.Create(signInDTO.Email), hashedPassword));
         context.SaveChanges();
 
         IAccountRepository accountRepository = new AccountRepository(context);
         ISecurityService securityService = new SecurityService(_configuration);
         SignIn signIn = new SignIn(accountRepository, securityService);
 
-        string token = signIn.Execute(email, password);
+        string token = signIn.Execute(signInDTO);
 
         AuthPayload payload = securityService.GetPayload(token);
 
         Assert.That(payload.Id, Is.TypeOf<int>());
         Assert.That(payload.Email, Is.TypeOf<string>());
-        Assert.That(payload.Email, Is.EqualTo(email));
+        Assert.That(payload.Email, Is.EqualTo(signInDTO.Email));
     }
 }
 

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace AuthenticationAPI.Domain.ValueObjects;
 
@@ -12,7 +11,7 @@ public class Email : ValueObject
     private Email(string value) { Value = value; }
 
     public static Email Create(string value) {
-        Regex EmailValidation = new Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+        Regex EmailValidation = new("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
 
         if (!EmailValidation.IsMatch(value))
             throw new Exception("Email is not valid.");

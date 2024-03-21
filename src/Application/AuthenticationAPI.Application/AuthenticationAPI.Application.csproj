@@ -11,12 +11,16 @@
     <None Remove="Common\Interfaces\" />
     <None Remove="Services\" />
     <None Remove="Common\Interfaces\Services\" />
+    <None Remove="Common\Interfaces\UseCases\" />
+    <None Remove="Common\DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Common\Interfaces\Services\" />
+    <Folder Include="Common\Interfaces\UseCases\" />
+    <Folder Include="Common\DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\AuthenticationAPI.Domain\AuthenticationAPI.Domain.csproj" />
