@@ -16,20 +16,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//var configurationBuilder = new ConfigurationBuilder()
-//    //.SetBasePath("path here") //<--You would need to set the path
-//    .AddJsonFile("appsettings.json"); //or what ever file you have the settings
-
-//IConfiguration configuration = configurationBuilder.Build();
-
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 builder.Services.AddScoped<ISignIn, SignIn>();
+builder.Services.AddScoped<ISignUp, SignUp>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
-//builder.Services.AddScoped(_ => configuration);
 
 builder.Services.AddSingleton<ISecurityService, SecurityService>();
 
 var app = builder.Build();
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

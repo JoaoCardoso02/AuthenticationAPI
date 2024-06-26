@@ -18,12 +18,12 @@ public class AccountRepository : IAccountRepository
         return _context.Account.SingleOrDefault(account => account.Email.Value == email);
     }
 
-    public int CreateAccount(Account account)
+    public Account CreateAccount(Account account)
 	{
         _context.Account.Add(account);
 		_context.SaveChanges();
 
-		return Convert.ToInt32(account.Id);
+		return account;
     }
 }
 

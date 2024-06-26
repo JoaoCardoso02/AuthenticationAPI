@@ -18,10 +18,10 @@ public class AccountUnit
         Email email = Email.Create("valid@email.com");
         Account account = new Account(email, "strong-password");
 
-        Assert.Multiple(() => {
+        Assert.Multiple((TestDelegate)(() => {
             Assert.IsNotEmpty(account.Email);
-            Assert.That(email, Is.EqualTo(account.Email));
-        });
+            Assert.That(email, Is.EqualTo((object)account.Email));
+        }));
     }
 
     [Test]
