@@ -22,9 +22,9 @@ public class SignIn : ISignIn
 
     public string Execute(SignInDTO signIn)
     {
-        Email emailResult = Email.Create(signIn.Email);
+        Email email = Email.Create(signIn.Email);
 
-        Account? account = _accountRepository.GetAccount(emailResult);
+        Account? account = _accountRepository.GetAccount(email);
 
         if (account == null || account.Id == null)
             throw new Exception("Account does not exist.");

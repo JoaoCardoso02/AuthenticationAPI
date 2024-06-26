@@ -10,37 +10,79 @@
   <MonoDevelop.Ide.ItemProperties.Domain.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.tests.AuthenticationAPI.Application.UnitTests FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.src.Services.Web.AuthenticationAPI.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/AuthenticationAPI.Infrastructure/Persistence/ApplicationDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Application/AuthenticationAPI.Application/Adapters/CryptographyAdapter.cs">
     <Files>
-      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Repositories/AccountRepository.cs" />
-      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Persistence/Configurations/AccountConfiguration.cs" />
-      <File FileName="src/Infrastructure/AuthenticationAPI.Infrastructure/Persistence/ApplicationDbContext.cs" Line="7" Column="46" />
+      <File FileName="src/Application/AuthenticationAPI.Application/UseCases/SignIn.cs" Line="35" Column="6" />
+      <File FileName="src/Application/AuthenticationAPI.Application/Adapters/CryptographyAdapter.cs" Line="12" Column="1" />
+      <File FileName="src/Application/AuthenticationAPI.Application/Services/SecurityService.cs" Line="26" Column="101" />
+      <File FileName="src/Application/AuthenticationAPI.Application/Common/Interfaces/Services/ISecurityService.cs" Line="7" Column="31" />
+      <File FileName="src/Services/AuthenticationAPI.API/Program.cs" Line="28" Column="28" />
+      <File FileName="src/Services/AuthenticationAPI.API/appsettings.Development.json" Line="4" Column="1" />
+      <File FileName="src/Services/AuthenticationAPI.API/appsettings.json" Line="4" Column="1" />
+      <File FileName="src/Services/AuthenticationAPI.API/Controllers/AuthController.cs" Line="20" Column="35" />
+      <File FileName="tests/AuthenticationAPI.Application.IntegrationTests/UseCases/SignIn.Integration.cs" Line="41" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AuthenticationAPI" expanded="True">
-            <Node name="src" expanded="True">
-              <Node name="Domain" expanded="True">
-                <Node name="AuthenticationAPI.Domain" expanded="True">
-                  <Node name="Entities" expanded="True" />
+          <Node name="AuthenticationAPI">
+            <Node name="src">
+              <Node name="Application">
+                <Node name="AuthenticationAPI.Application" expanded="True">
+                  <Node name="Adapters" expanded="True" />
+                  <Node name="Common" expanded="True">
+                    <Node name="DTOs" expanded="True" />
+                    <Node name="Interfaces" expanded="True">
+                      <Node name="UseCases" expanded="True" />
+                    </Node>
+                  </Node>
+                  <Node name="Services" expanded="True" />
+                  <Node name="UseCases" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Infrastructure">
-                <Node name="AuthenticationAPI.Infrastructure">
+              <Node name="Domain">
+                <Node name="AuthenticationAPI.Domain">
+                  <Node name="ValueObjects" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Infrastructure" expanded="True">
+                <Node name="AuthenticationAPI.Infrastructure" expanded="True">
+                  <Node name="Common" expanded="True" />
                   <Node name="Persistence" expanded="True">
-                    <Node name="ApplicationDbContext.cs" selected="True" />
+                    <Node name="Configurations" expanded="True" />
                   </Node>
                   <Node name="Repositories" expanded="True" />
                 </Node>
               </Node>
+              <Node name="Services">
+                <Node name="Web">
+                  <Node name="AuthenticationAPI.API" expanded="True">
+                    <Node name="Controllers" expanded="True" />
+                    <Node name="appsettings.json" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
             </Node>
-            <Node name="tests" expanded="True">
-              <Node name="AuthenticationAPI.Application.IntegrationTests">
+            <Node name="tests">
+              <Node name="AuthenticationAPI.Application.IntegrationTests" expanded="True">
                 <Node name="UseCases" expanded="True" />
               </Node>
-              <Node name="AuthenticationAPI.Domain.UnitTests">
+              <Node name="AuthenticationAPI.Domain.UnitTests" expanded="True">
                 <Node name="Entities" expanded="True" />
+                <Node name="ValueObjects" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="AuthenticationAPI">
+            <Node name="tests">
+              <Node name="AuthenticationAPI.Application.IntegrationTests" expanded="True" selected="True">
+                <Node name="AuthenticationAPI.Application.IntegrationTests.UseCases" expanded="True">
+                  <Node name="SignInIntegration" expanded="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
